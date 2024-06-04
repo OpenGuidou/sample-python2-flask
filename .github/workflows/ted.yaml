@@ -9,11 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     name: Ted run
     steps:
-      # - uses: oleksiyrudenko/gha-git-credentials@v2-latest
-      #   with:
-      #     token: '${{ secrets.GITHUB_TOKEN }}'
-      - name: TED run
-        uses: OpenGuidou/ted@v0.8
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
-          git-repo: "${{github.repository}}"
-          ted-flavor: unit-tests
+          fetch-depth: 0
+      - name: TED run
+        uses: OpenGuidou/ted@v0.9
+        env:
+          OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }}
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          EMBEDDING_DEPLOYMENT_NAME: ${{ secrets.EMBEDDING_DEPLOYMENT_NAME }}
+        with:
+          ted-flavor: python2-3

@@ -10,7 +10,7 @@ jobs:
     name: Ted run
     steps:              
       - name: TED run
-        uses: OpenGuidou/ted@v0.3
+        uses: OpenGuidou/ted@v0.4
         with:
           git-repo: "${{github.repository}}"
           ted-flavor: unit-tests

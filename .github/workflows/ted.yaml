@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Ted run
     steps:
-      - uses: oleksiyrudenko/gha-git-credentials@v2-latest
-        with:
-          token: '${{ secrets.GITHUB_TOKEN }}'
+      # - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+      #   with:
+      #     token: '${{ secrets.GITHUB_TOKEN }}'
       - name: TED run
         uses: OpenGuidou/ted@v0.8
         with:

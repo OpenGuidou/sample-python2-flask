@@ -1,0 +1,16 @@
+---
+name: Ted run for python migration
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Ted run
+    steps:              
+      - name: TED run
+        uses: OpenGuidou/ted@v0.2
+        with:
+          git-repo: "${{github.repository}}"
+          ted-flavor: unit-tests

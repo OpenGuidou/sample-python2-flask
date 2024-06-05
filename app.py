@@ -9,8 +9,8 @@ def hello():
     return render_template('index.html')
 
 if __name__ == "__main__":
-    print "Running app"
+    print("Running app")
     port = int(os.environ.get("PORT", 5000))
-    if port <> 5000:
-        print "Using non-standard port %d" % port
+    if port != 5000:
+        print(f"Using non-standard port {port}")
     app.run(host='0.0.0.0', port=port)

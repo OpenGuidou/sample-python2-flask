@@ -14,7 +14,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: TED run
-        uses: OpenGuidou/ted@v0.9
+        uses: OpenGuidou/ted@v0.11
         env:
           OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }}
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
@@ -22,3 +22,6 @@ jobs:
           EMBEDDING_DEPLOYMENT_NAME: ${{ secrets.EMBEDDING_DEPLOYMENT_NAME }}
         with:
           ted-flavor: python2-3
+          github_repository: ${{ github.repository }}
+          github_token: ${{ github.token }}
+          branch: ${{ github.ref_name }}

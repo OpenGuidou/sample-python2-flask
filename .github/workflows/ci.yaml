@@ -16,8 +16,6 @@ on:
       - 'LICENSE'
       - '*.md'
       - '*.adoc'
-  workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -31,5 +31,5 @@ jobs:
           ted-flavor: python2-3
           github-repository: ${{ github.repository }}
           push: true
-          branch: ${{ github.ref_name }}
+          git-branch: ${{ github.ref_name }}
 

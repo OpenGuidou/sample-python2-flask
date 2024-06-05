@@ -10,14 +10,12 @@ on:
       - 'LICENSE'
       - '*.md'
       - '*.adoc'
-      - '*.txt'
   pull_request:
     paths-ignore:
       - '.gitignore'
       - 'LICENSE'
       - '*.md'
       - '*.adoc'
-      - '*.txt'
   workflow_dispatch:
 
 jobs:

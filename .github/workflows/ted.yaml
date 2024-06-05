@@ -18,16 +18,17 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
       - name: TED run
-        uses: OpenGuidou/ted@v0.11
+        uses: OpenGuidou/ted@v0.12
         env:
           OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }}
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
-          EMBEDDING_DEPLOYMENT_NAME: ${{ secrets.EMBEDDING_DEPLOYMENT_NAME }}
           GPT_DEPLOYMENT_NAME: ${{ secrets.GPT_DEPLOYMENT_NAME }}
+          EMBEDDING_DEPLOYMENT_NAME: ${{ secrets.EMBEDDING_DEPLOYMENT_NAME }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           ted-flavor: python2-3
-          github_repository: ${{ github.repository }}
-          github_token: ${{ github.token }}
+          github-repository: ${{ github.repository }}
+          push: true
           branch: ${{ github.ref_name }}
 

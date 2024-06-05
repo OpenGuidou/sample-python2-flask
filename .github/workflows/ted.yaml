@@ -20,5 +20,6 @@ jobs:
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
           EMBEDDING_DEPLOYMENT_NAME: ${{ secrets.EMBEDDING_DEPLOYMENT_NAME }}
+          GPT_DEPLOYMENT_NAME: ${{ secrets.GPT_DEPLOYMENT_NAME }}
         with:
           ted-flavor: python2-3

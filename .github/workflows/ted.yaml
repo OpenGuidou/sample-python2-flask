@@ -15,11 +15,11 @@ jobs:
           fetch-depth: 0
       - name: Configure Git author
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "ted@github.com"
+          git config --local user.name "TED"
           git config --global --add safe.directory /github/workspace
       - name: TED run
-        uses: OpenGuidou/ted@v0.21
+        uses: OpenGuidou/ted@v0.22
         env:
           OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }}
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}

@@ -18,7 +18,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
       - name: TED run
-        uses: OpenGuidou/ted@v0.12
+        uses: OpenGuidou/ted@v0.13
         env:
           OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }}
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}

@@ -1,6 +1,6 @@
 # [DEPRECATED] Sample Application with Python and Flask
 
-This sample is running on: https://python2-flask.is-easy-on-scalingo.com/
+This sample is running on: https://python3-flask.is-easy-on-scalingo.com/
 
 ## DEPRECATION NOTICE
 
@@ -11,10 +11,10 @@ However, it is still functional with the `scalingo-18` stack.
 ## Run Locally
 
 ```shell
-virtualenv
-. bin/activate
+python3 -m venv venv
+. venv/bin/activate
 pip install -r requirements.txt
-python app.py
+python3 app.py
 ```
 
 ## Deploy via Git
